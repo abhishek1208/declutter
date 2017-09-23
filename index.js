@@ -25,7 +25,7 @@ function makedir(){
 }
 
 function checkFileExists(){
-	exec('ls -lR '+ path + '/Desktop/*.mp4'+ '| wc -l',function(error,stdout,stderr){
+	exec('ls -lR '+ path + '/Desktop/*.png'+ '| wc -l',function(error,stdout,stderr){
 		if(error){
 			console.error(`exec error: ${error}`);
             return;
