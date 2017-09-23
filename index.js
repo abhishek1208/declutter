@@ -5,7 +5,7 @@ const os=require('os');
 var path=os.homedir();
 
 function moveFile(){
-	exec('mv '+path+'/Desktop/*.png '+path+'/Desktop/screenshots', function(error,stdout,stderr){
+	exec('mv '+path+'/Desktop/"Screen Shot"'+'*.png '+path+'/Desktop/screenshots', function(error,stdout,stderr){
 		if (error) {
 			console.error(`exec error: ${error}`);
             return;
@@ -25,7 +25,7 @@ function makedir(){
 }
 
 function checkFileExists(){
-	exec('ls -lR '+ path + '/Desktop/*.png'+ '| wc -l',function(error,stdout,stderr){
+	exec('ls -lR '+ path + '/Desktop/"Screen Shot"'+'*.png'+ '| wc -l',function(error,stdout,stderr){
 		if(error){
 			console.error(`exec error: ${error}`);
             return;
