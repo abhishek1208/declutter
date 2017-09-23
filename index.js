@@ -23,10 +23,31 @@ function makedir(){
         moveFile();
 	})
 }
-if (!fs.existsSync(path+'/Desktop/screenshots')) {
-	makedir();
+
+function checkFileExists(){
+	exec('ls -lR '+ path + '/Desktop/*.mp4'+ '| wc -l',function(error,stdout,stderr){
+		if(error){
+			console.error(`exec error: ${error}`);
+            return;
+		}
+
+		if(stdout==0){
+			return;
+		}
+		
+		if (!fs.existsSync(path+'/Desktop/screenshots')) {
+			makedir();
+		}		
+		
+		else{
+			moveFile();
+		}
+
+
+	})
 }
-else{
-	moveFile();
-}
+
+
+checkFileExists();
+
 
