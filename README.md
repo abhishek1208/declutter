@@ -4,7 +4,7 @@ A utility to move all your random screenshots from /Desktop to /Desktop/screensh
 
 ## Installation
 
-Change directory to project folder, install this package golbally
+Change directory to project folder, install this package globally
 
 ```
 sudo npm install -g
